@@ -3,11 +3,11 @@ name = "satway-build-info"
 version = "0.1.0"
 edition = "2021"
 authors = ["zhangjianshe <zhangjianshe@gmail.com>"]
-license = "GPL-3"
+license = "MIT OR Apache-2.0"
 publish = true
 description = "provide a build information extract for build.rs script"
 homepage = "https://github.com/zhangjianshe/satway-build-info.git"
-
+keywords = ["build","git","build-info"]
 [dependencies]
 serde = { version = "1.0.217", features = ["derive"] }
 serde_json = "1.0.135"
