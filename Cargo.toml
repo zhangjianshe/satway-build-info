@@ -2,6 +2,10 @@
 name = "satway-build-info"
 version = "0.1.0"
 edition = "2021"
+authors = ["zhangjianshe@gmail.com"]
+license = "GPL-3"
+publish = true
+homepage = "https://github.com/zhangjianshe/satway-build-info.git"
 
 [dependencies]
 serde = { version = "1.0.217", features = ["derive"] }
