@@ -2,10 +2,10 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone,Serialize,Deserialize,Default)]
 pub struct CompileInfo{
-    gitHash:String,
-    rustVersion:String,
-    gitCommitTime:String,
-    buildTime:String,
+    git_hash:String,
+    rust_version:String,
+    git_commit_time:String,
+    build_time:String,
 }
 
 impl CompileInfo{
