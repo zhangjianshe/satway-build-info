@@ -1,1 +1,1 @@
-mod compile_info;
+pub mod compile_info;
