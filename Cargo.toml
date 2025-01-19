@@ -6,7 +6,7 @@ edition = "2021"
 authors = ["zhangjianshe <zhangjianshe@gmail.com>"]
 license = "MIT"
 publish = true
-description = "provide a build information extract for build.rs script"
+description = "provide build information for rust application"
 homepage = "https://github.com/zhangjianshe/satway-build-info.git"
 keywords = ["build-utils","build","git","build-info","satway"]
 [dependencies]
