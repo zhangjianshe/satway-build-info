@@ -2,6 +2,7 @@ use std::process::Command;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
+#[serde(rename_all = "camelCase")]
 pub struct CompileInfo {
     pub git_commit_email: String,
     pub git_commit_hash: String,
