@@ -7,7 +7,7 @@ license = "MIT OR Apache-2.0"
 publish = true
 description = "provide a build information extract for build.rs script"
 homepage = "https://github.com/zhangjianshe/satway-build-info.git"
-keywords = ["build","git","build-info","satway"]
+keywords = ["build-utils","build","git","build-info","satway"]
 [dependencies]
 serde = { version = "1.0.217", features = ["derive"] }
 serde_json = "1.0.135"
