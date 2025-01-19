@@ -36,31 +36,38 @@ Current Version=0.1.19
 }
 ```
  generally, this is used in the build.rs file
- when build project,we write the information to a file like 'src/context/compile_info.txt'
+ when build project,we write the information to a file like 'OUT_DIR/compile_info.txt'
  then we can use it in our program with
- CompileInfo::load_from_str(!include("/src/context/compile_info.txt"));
+ CompileInfo::load_from_str(!include("OUT_DIR/compile_info.txt"));
 
  CompileInfo serialize and Deserialize by serde_json library.
 
-the following code is build.rs,which will write the compile information to src/context/info.txt
+the following code is build.rs,which will write the compile information to `OUT_DIR/compile_info.txt`
+and set env COMPILE_INFO_FILE=`OUT_DIR/compile_info.txt`
 ```rust
-use std::fmt::{format, Debug};
-use std::fs;
 use satway_build::CompileInfo;
+use std::fmt::Debug;
+use std::path::Path;
+use std::{env, fs};
 
 pub fn main() {
+
     println!("cargo:rerun-if-changed=build.rs");
-    let compile_info:CompileInfo=CompileInfo::load_from_env();
-    fs::write("src/context/info.txt",compile_info.save_to_str(true)).expect("Unable to write file");
+    let compile_info: CompileInfo = CompileInfo::load_from_env();
+
+    let out_file_path = Path::new(&env::var("OUT_DIR").unwrap()).join("compile_info.txt");
+    println!("cargo:rustc-env=COMPILE_INFO_FILE={}", out_file_path.as_path().to_str().unwrap());
+    fs::write(out_file_path, compile_info.save_to_str(true)).expect("Unable to write file");
 }
 ```
-
-the following function will load the compile information from src/context/info.txt
+the following function will load the compile information from env COMPILE_INFO_FILE's file
 ```rust
 use satway_build::CompileInfo;
-fn main(){
-    let compile_info=CompileInfo::load_from_str(!include("/src/context/info.txt"));
-    println!("{}",compile_info);
+
+pub fn version_info() {
+    let json = include_str!(env!("COMPILE_INFO_FILE"));
+    let compile_info = CompileInfo::load_from_str(json);
+    println!("{:#?}", compile_info);
 }
 ``` 
 
