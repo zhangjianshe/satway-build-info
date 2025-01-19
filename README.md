@@ -11,12 +11,12 @@
   </p>
 </div>
 
-Current Version=0.1.19
+Current Version=0.1.20
 
 ## usage
 
 ```shell
-    cargo add satway_build@0.1.19
+    cargo add satway_build@0.1.20
 ```
 
  This crate collects building information from all kinds of environments into an object [CompileInfo]

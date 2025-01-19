@@ -1,6 +1,6 @@
 [package]
 name = "satway_build"
-version = "0.1.19"
+version = "0.1.20"
 repository = "https://github.com/zhangjianshe/satway-build-info.git"
 edition = "2021"
 authors = ["zhangjianshe <zhangjianshe@gmail.com>"]
