@@ -4,14 +4,14 @@
 ## information
 ![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
 
-Current Version=0.1.16
+Current Version=0.1.17
 
 
 
 ## usage
 
 ```shell
-    cargo add satway_build@0.1.16*
+    cargo add satway_build@0.1.17
 ```
 
  This crate collects building information from all kinds of environments in to an object [CompileInfo]
