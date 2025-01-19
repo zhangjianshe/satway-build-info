@@ -1,19 +1,21 @@
-## satway-build
+# satway-build
   provide build information for rust application
 
-## build information
+## information
 ![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
 
 Current Version=0.1.12
 
 ## usage
 
-```rust
-cargo add satway_build 
+```shell
+    cargo add satway_build 
 ```
 
  This crate collects building information from all kinds of environments in to an object [CompileInfo]
-
+ which can be used in the program to get the building information. 
+![information flow](doc/information_flow.png)
+ 
  generally, this is used in the build.rs file
  when build project,we write the information to a file like 'src/context/compile_info.txt'
  then we can use it in our program with
@@ -44,7 +46,7 @@ fn main(){
 ``` 
 
 
-# release a new version
+## dev: how to release a new version
 ```shell
   # this command will update the version in Cargo.toml and Cargo.lock
   # and push the new version to github
