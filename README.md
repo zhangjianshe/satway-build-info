@@ -16,7 +16,7 @@ Current Version=0.1.14
  which can be used in the program to get the building information. 
 ![information flow](doc/information_flow.png)
  
- current collect infomration like this
+ current collect information like this
 ```json
 {
   "gitCommitEmail": "zhangjianshe@gmail.com",
