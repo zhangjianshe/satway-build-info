@@ -33,3 +33,11 @@ cargo add satway_build
  println!("{}",json_str);
 
  ```
+
+# release a new version
+```shell
+  # this command will update the version in Cargo.toml and Cargo.lock
+  # and push the new version to github
+  # in github action's will trigger a tag action to publish this crate to crates.io
+  ./release.sh "VERSION"
+```
