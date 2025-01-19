@@ -14,7 +14,7 @@
 //! #[example]
 //!
 //! build.rs  write build information to a file
-//! ```
+//! ```ignore
 //!
 //! use satway_build::CompileInfo;
 //! use std::fmt::Debug;
@@ -33,7 +33,7 @@
 //! ```
 //!
 //! use it in an api server
-//! ```
+//! ```ignore
 //! use satway_build::CompileInfo;
 //!
 //! pub fn version_info() {
