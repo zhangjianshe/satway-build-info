@@ -27,10 +27,10 @@ impl CompileInfo {
     ///
     pub fn save_to_str(&self,pretty:bool) -> String {
         if  pretty{
-            serde_json::to_string(&self).unwrap()
+            format!("{}", serde_json::to_string_pretty(&self).unwrap())
         }
         else {
-            format!("{}", serde_json::to_string_pretty(&self).unwrap())
+            serde_json::to_string(&self).unwrap()
         }
     }
 

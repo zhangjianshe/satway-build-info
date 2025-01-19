@@ -16,6 +16,18 @@ Current Version=0.1.14
  which can be used in the program to get the building information. 
 ![information flow](doc/information_flow.png)
  
+ current collect infomration like this
+```json
+{
+  "gitCommitEmail": "zhangjianshe@gmail.com",
+  "gitCommitHash": "731b4ce",
+  "gitCommitMessage": "release version: 0.1.14",
+  "gitCommitTime": "2025-01-19 13:29:40 +0800",
+  "rustVersion": "rustc 1.83.0 (90b35a623 2024-11-26)",
+  "buildTime": "2025-01-19 05:32:42",
+  "buildOs": "linux"
+}
+```
  generally, this is used in the build.rs file
  when build project,we write the information to a file like 'src/context/compile_info.txt'
  then we can use it in our program with
