@@ -27,3 +27,14 @@
 mod compile;
 pub use compile::CompileInfo;
 
+#[cfg(test)]
+mod tests {
+    use crate::CompileInfo;
+
+    #[test]
+    fn test_build(){
+        let compile_info=CompileInfo::load_from_env();
+        let json_str=compile_info.save_to_str(true);
+        println!("{}",json_str);
+    }
+}

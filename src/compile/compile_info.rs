@@ -36,9 +36,12 @@ impl CompileInfo {
     /// execute some command from the environments
     pub fn load_from_env()->Self{
         let output = Command::new("git")
-            .args(&["git", "log", "HEAD","--format=%h%n%s%n%ce%n%ci"])
-            .output()
-            .expect("Failed to execute git log command");
+            .args(&["log", "HEAD","--format=%h%n%s%n%ce%n%ci"])
+            .output();
+      let output=  match  output{
+            Ok(output) => output,
+            Err(err) => panic!("Failed to execute git log command: {:?}", err),
+        };
 
         let git_log = String::from_utf8(output.stdout)
             .expect("Failed to convert git log output to string");
