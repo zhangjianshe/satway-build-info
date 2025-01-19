@@ -61,8 +61,8 @@ impl CompileInfo {
             git_commit_hash: lines[0].to_string(),
             git_commit_message: lines[1].to_string(),
             git_commit_time: lines[3].to_string(),
-            rust_version:rustc_output,
-            build_time: chrono::Utc::now().to_rfc3339(),
+            rust_version:rustc_output.trim().to_string(),
+            build_time: chrono::Utc::now().format("%Y-%m-%d %H:%M:%S").to_string(),
             build_os:build_os.to_string()
         }
     }
