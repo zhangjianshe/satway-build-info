@@ -1,6 +1,6 @@
 [package]
 name = "satway_build"
-version = "0.1.4"
+version = "0.1.5"
 edition = "2021"
 authors = ["zhangjianshe <zhangjianshe@gmail.com>"]
 license = "MIT OR Apache-2.0"
@@ -11,3 +11,4 @@ keywords = ["build","git","build-info","satway"]
 [dependencies]
 serde = { version = "1.0.217", features = ["derive"] }
 serde_json = "1.0.135"
+chrono = "0.4.39"
