@@ -1,5 +1,5 @@
 
-//! satway_build_info
+//! satway_build
 //!
 //! This crate collects building information from all kinds of environments in to an object [CompileInfo]
 //!

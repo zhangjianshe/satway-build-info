@@ -1,10 +1,10 @@
-## satway-build-info 
+## satway-build
   provide build information for rust application
 
 ## build information
 ![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
 
-Current Version=0.1.10
+**Current Version=0.1.10**
 
 ## usage
 
@@ -21,18 +21,28 @@ cargo add satway_build
 
  CompileInfo serialize and Deserialize by serde_json library.
 
+the following code is build.rs,which will write the compile information to src/context/info.txt
+```rust
+use std::fmt::{format, Debug};
+use std::fs;
+use satway_build::CompileInfo;
 
- #[example]
+pub fn main() {
+    println!("cargo:rerun-if-changed=build.rs");
+    let compile_info:CompileInfo=CompileInfo::load_from_env();
+    fs::write("src/context/info.txt",compile_info.save_to_str(true)).expect("Unable to write file");
+}
+```
 
- ```
- use serde::{Deserialize, Serialize};
- use std::process::Command;use satway_build::CompileInfo;
+the following function will load the compile information from src/context/info.txt
+```rust
+use satway_build::CompileInfo;
+fn main(){
+    let compile_info=CompileInfo::load_from_str(!include("/src/context/info.txt"));
+    println!("{}",compile_info);
+}
+``` 
 
- let compile_info=CompileInfo::load_from_env();
- let json_str=compile_info.save_to_str(true);
- println!("{}",json_str);
-
- ```
 
 # release a new version
 ```shell
