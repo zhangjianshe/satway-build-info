@@ -2,8 +2,13 @@
 ## this file change the release version
 VERSION=$1
 if [ -z "$VERSION" ]; then
-    echo "publish a new version"
-    echo "./release.sh 0.1.7"
+    echo "THIS TOOL IS USED TO PUBLISH A NEW VERSION TO GITHUB TAG."
+    echo "  "
+    echo "$ ./release.sh version_number"
+    ## compute next release version
+    NEXT_VERSION=$(cargo pkgid | sed -E 's/.*@([0-9]+\.[0-9]+)\.([0-9]+)/\1.\2/' | awk -F'.' '{print $1"."$2"."($3+1)}')
+    echo "next public version would be : $NEXT_VERSION"
+    echo "please try                     ./release.sh $NEXT_VERSION"
     exit 1
 fi
 
