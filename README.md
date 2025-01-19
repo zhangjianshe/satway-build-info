@@ -4,7 +4,7 @@
 ## build information
 ![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
 
-Current Version=0.1.8
+Current Version=0.1.9
 
 ## usage
 
