@@ -1,12 +1,21 @@
-# satway-build
-  provide build information for rust application
+<div align="center">
+  <h1>satway-build</h1>
+  <p>
+    <strong>provide build information for rust application</strong>
+  </p>
+  <p>
+  <!-- prettier-ignore-start -->
+[![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
+![github.com](https://img.shields.io/github/license/zhangjianshe/satway-build-info)
+[![crates.io](https://img.shields.io/crates/d/satway_build.svg)](https://crates.io/crates/satway_build)
+[![Documentation](https://docs.rs/satway_build/badge.svg)](https://docs.rs/crate/satway_build/latest)
 
-## information
-![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
+  <!-- prettier-ignore-end -->
+  </p>
+</div>
+
 
 Current Version=0.1.17
-
-
 
 ## usage
 
