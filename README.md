@@ -19,7 +19,7 @@ Current Version=0.1.18
     cargo add satway_build@0.1.18
 ```
 
- This crate collects building information from all kinds of environments in to an object [CompileInfo]
+ This crate collects building information from all kinds of environments into an object [CompileInfo]
  which can be used in the program to get the building information. 
 ![information flow](doc/information_flow.png)
  
