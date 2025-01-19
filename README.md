@@ -1,8 +1,16 @@
 ## satway-build-info 
   provide build information for rust application
 
-# build information
+## build information
 ![github build](https://github.com/zhangjianshe/satway-build-info/actions/workflows/rust.yml/badge.svg)
+
+Current Version=0.1.7
+
+## usage
+
+```rust
+cargo add satway_build 
+```
 
  This crate collects building information from all kinds of environments in to an object [CompileInfo]
 

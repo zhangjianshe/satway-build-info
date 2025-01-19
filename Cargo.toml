@@ -1,6 +1,7 @@
 [package]
 name = "satway_build"
 version = "0.1.7"
+repository = "https://github.com/zhangjianshe/satway-build-info.git"
 edition = "2021"
 authors = ["zhangjianshe <zhangjianshe@gmail.com>"]
 license = "MIT OR Apache-2.0"
